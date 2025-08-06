@@ -13,21 +13,19 @@
     <!-- Load 3D assets -->
     <a-assets>
       <a-asset-item id="mustang" src="assets/ford_mustang_shelby_gt500kr/scene.gltf"></a-asset-item> 
-       <a-entity light="type: ambient; intensity: 1"></a-entity>
-       <a-entity light="type: directional; intensity: 1" position="1 1 1"></a-entity>
-       
     </a-assets>
-    <!-- Barcode marker -->
-    <a-marker type="barcode" value="12">
+    <!-- Lighting entities should be outside of a-assets -->
+    <a-entity light="type: ambient; intensity: 1"></a-entity>
+    <a-entity light="type: directional; intensity: 1" position="1 1 1"></a-entity>
+    <!-- Barcode marker with camera -->
+    <a-marker-camera type="barcode" value="12">
       <a-entity 
         gltf-model="#mustang"
         position="0 0 0.5"
         scale="0.5 0.5 0.5"
         rotation="0 0 0">
       </a-entity>
-    </a-marker>
-    <!-- Regular AR camera -->
-    <a-entity camera></a-entity>
+    </a-marker-camera>
   </a-scene>
 </body>
 </html>
