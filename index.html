@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <title>AR Mustang</title>
+  <title>AR-marker</title>
   <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1.2.0/dist/aframe-master.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@master/aframe/build/aframe-ar.min.js"></script>
 </head>
@@ -11,19 +11,21 @@
   <a-scene 
   embedded arjs="sourceType: webcam; 
                  detectionMode: mono_and_matrix;
-                 matrixCodeType: 3x3;
-                 debugUIEnabled: true;">
+                 matrixCodeType: 4x4_BCH_13_5_5;">
     <a-assets>
-      <a-asset-item id="mustang" src="assets/scene.gltf"></a-asset-item>
+      <a-asset-item id="salah" src="assets/scene.gltf"></a-asset-item>
     </a-assets>
     
-    <a-marker-camera type="barcode" value="12">
-      <a-entity gltf-model="#mustang"
+  
+   <a-marker type="barcode" value="12">
+      <a-entity gltf-model="url(assets/scene.gltf)"
                 position="0 0 0"
-                scale="0.1 0.1 0.1"
+                scale="2 2 2"
                 rotation="0 0 0">
-      </a-entity>
-    </a-marker-camera>
+      </a-entity> 
+    </a-marker>
+
+    <a-entity camera></a-entity>
   </a-scene>
 </body>
 </html>

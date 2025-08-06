@@ -1,8 +1,11 @@
 Model Information:
-* title:	Ford Mustang Shelby GT500KR
-* source:	https://sketchfab.com/3d-models/ford-mustang-shelby-gt500kr-679dc00183a145c1b2021f6933308172
-* author:	RPMRender (https://sketchfab.com/RPMRender)
+* title:	Mohamed Salah (mo salah)
+* source:	https://sketchfab.com/3d-models/mohamed-salah-mo-salah-890c5964af4148eea8fa1a24d098214c
+* author:	Khaled Abdullah (https://sketchfab.com/khaledabdullah.ezz)
 
 Model License:
-* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
-* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Mohamed Salah (mo salah)" (https://sketchfab.com/3d-models/mohamed-salah-mo-salah-890c5964af4148eea8fa1a24d098214c) by Khaled Abdullah (https://sketchfab.com/khaledabdullah.ezz) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
