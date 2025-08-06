@@ -1,31 +1,27 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AR Mustang on Barcode</title>
-  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <title>Barcode Debug</title>
+  <!-- USE THESE EXACT LIBRARY VERSIONS -->
+  <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1.4.2/dist/aframe-master.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.4.0/aframe/build/aframe-ar.min.js"></script>
 </head>
-<body style="margin: 0; overflow: hidden;">
-  <a-scene embedded arjs="sourceType: webcam;">
-    <!-- Load 3D assets -->
-    <a-assets>
-      <a-asset-item id="mustang" src="assets/ford_mustang_shelby_gt500kr/scene.gltf"></a-asset-item> 
-    </a-assets>
-    <!-- Lighting entities should be outside of a-assets -->
-    <a-entity light="type: ambient; intensity: 1"></a-entity>
-    <a-entity light="type: directional; intensity: 1" position="1 1 1"></a-entity>
-    <!-- Barcode marker with camera -->
+<body style="margin: 0;">
+  <a-scene 
+    vr-mode-ui="enabled: false"
+    embedded 
+    arjs="
+      sourceType: webcam;
+      detectionMode: mono_and_matrix;
+      matrixCodeType: 3x3;
+      debugUIEnabled: true;
+    ">
+    
+    <!-- TEST WITH SIMPLE BOX -->
     <a-marker-camera type="barcode" value="12">
-      <a-entity 
-        gltf-model="#mustang"
-        position="0 0 0.5"
-        scale="0.5 0.5 0.5"
-        rotation="0 0 0">
-      </a-entity>
+      <a-box color="red" position="0 0.5 0"></a-box>
     </a-marker-camera>
+    
   </a-scene>
 </body>
 </html>
